@@ -3,8 +3,6 @@
          echo "Form was Submitted"; 
 
    }
-
-
 ?>
 <!DOCTYPE html>
 <html>
