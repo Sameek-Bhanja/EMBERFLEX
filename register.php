@@ -37,7 +37,7 @@ require_once("includes/classes/FormSanitizer.php");
 
                     <input type="password" name="password" placeholder="Password" required>
 
-                    <input type="password" name="password2" placeholder="Confirm Password">
+                    <input type="password" name="password2" placeholder="Confirm Password" require>
 
                     <input type="submit" name="submitButton" value="SUBMIT">
 
