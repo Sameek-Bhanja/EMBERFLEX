@@ -1,6 +1,10 @@
 <?php
 require_once("includes/config.php");
 require_once("includes/classes/FormSanitizer.php");
+require_once("includes/classes/Account.php");
+
+   $account = new Account($con);
+
    if(isset($_POST["submitButton"])) {
         $firstName = FormSanitizer::sanitizeFormString($_POST["firstName"]);
         $lastName = FormSanitizer::sanitizeFormString($_POST["lastName"]);
@@ -9,6 +13,8 @@ require_once("includes/classes/FormSanitizer.php");
         $email2 = FormSanitizer::sanitizeFormEmail($_POST["email2"]);
         $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
         $password2 = FormSanitizer::sanitizeFormPassword($_POST["password2"]);
+
+        $account->validateFirstName($firstName);
    }
 ?>
 <!DOCTYPE html>
@@ -31,6 +37,7 @@ require_once("includes/classes/FormSanitizer.php");
 
                <form method="POST">
 
+                    <?php echo $account->getError("First Name wrong lenght"); ?>
                     <input type="text" name="firstName" placeholder="First Name" required>
 
                     <input type="text" name="lastName" placeholder="Last Name" required>
