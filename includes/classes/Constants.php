@@ -9,5 +9,6 @@ class Constants {
     public static $emailTaken = "This Email is alredy in use";
     public static $passwordsDontMatch = "Your passwords don't match";
     public static $passwordLenght = "Your password should be 2 to 8 characters";
+    public static $loginFailed = "Login failed: your username/password is incorrect";
     }
 ?>
