@@ -14,11 +14,11 @@ class Account {
         }
     }
 
-    /*public function getError($error) {
-        if(in_array($error, $this->errorArray)){
+    public function getError($error) {
+        if(in_array($error, $this->errorArray))     {
             return $error;
         }
-    } */
+    } 
 
 }
 ?>
