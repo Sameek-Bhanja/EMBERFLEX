@@ -2,6 +2,7 @@
 require_once("includes/config.php");
 require_once("includes/classes/FormSanitizer.php");
 require_once("includes/classes/Account.php");
+require_once("includes/classes/Constants.php");
 
    $account = new Account($con);
 
@@ -39,8 +40,8 @@ require_once("includes/classes/Account.php");
 
                     <?php 
 
-                    echo $account->getError("First Name wrong lenght"); 
-                    
+                    echo $account->getError(Constants::$firstNameCharacters); 
+
                     ?>
                     <input type="text" name="firstName" placeholder="First Name" required>
 
