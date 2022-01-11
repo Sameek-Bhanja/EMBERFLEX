@@ -14,7 +14,7 @@ $account = new Account($con);
         $sucsess = $account->login( $username, $password);
 
         if($sucsess) {
-            //store session
+            $_SESSION["userLoggedIn"] = $username;
             header("Location: index.php");
         }
    }
