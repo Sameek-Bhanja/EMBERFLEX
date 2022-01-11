@@ -13,6 +13,7 @@ class Account {
         $this->validatelastName($ln);
         $this->validateUsername($un);
         $this->validateEmails($em, $em2);
+        $this->validatePasswords($pw, $pw2);
     }
 
     private function validateFirstName($fn) {
@@ -64,9 +65,20 @@ class Account {
         }
     }
 
+    private function validatePasswords($pw, $pw2) {
+        if($pw != $pw2) {
+            array_push($this->errorArray, Constants::$passwordsDontMatch);
+            return;
+        }
+
+        if(strlen($pw) < 2 || strlen($pw) > 8) {
+            array_push($this->errorArray, Constants::$passwordLenght);
+        }
+    }
+
     public function getError($error) {
         if(in_array($error, $this->errorArray))     {
-            return $error;
+            return "<span class='errorMessage'>$error</span>";
         }
     } 
 
