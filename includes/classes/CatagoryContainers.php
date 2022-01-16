@@ -46,7 +46,15 @@ class CategoryContainers {
         }
         
 
-        return $entitiesHtml . "<br>";
+        return "<div class='category'>
+                    <a href='category.php?id=$categoryId'>
+                        <h3>$title</h3>
+                    </a>
+
+                    <div class='entities'>
+                        $entitiesHtml
+                    </div>
+                </div>";
     }
 
 }
