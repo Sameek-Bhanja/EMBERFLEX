@@ -34,5 +34,26 @@ class Entity {
         return $this->sqlData["preview"];
     }
 
+     public function getSeasons() {
+        $query = $this->con->prepare("SELECT * FROM videos WHERE entityId=:id
+                                      AND isMovie=0 ORDER BY season, episode ASC");
+        $query->bindValue(":id", $entity->getId());
+        $query->execute();
+
+        $seasons = array();
+        $videos = array();
+        $currectSeason = null;
+        while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+
+            if($currectSeason !=null && $currectSeason != $row["season"]) {
+                
+            }
+
+            $currectSeason = $row["season"];
+            $videos[] = new Video($this->con, $row);
+
+        }
+     }
+
 }
 ?>

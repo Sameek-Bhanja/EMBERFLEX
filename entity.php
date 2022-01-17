@@ -10,4 +10,7 @@ $entity = new Entity($con, $entityId);
 
 $preview = new PreviewProvider($con, $userLoggedIn);
 echo $preview->createPreviewVideo($entity);
+
+$seasonProvider = new SeasonProvider($con, $userLoggedIn);
+echo $seasonProvider->create($entity);
 ?>
