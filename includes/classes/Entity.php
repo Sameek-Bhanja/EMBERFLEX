@@ -40,7 +40,7 @@ class Entity {
         $query->bindValue(":id", $entity->getId());
         $query->execute();
 
-        $seasons = array();
+        $seasons = array(); 
         $videos = array();
         $currectSeason = null;
         while($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -54,6 +54,5 @@ class Entity {
 
         }
      }
-
 }
 ?>
