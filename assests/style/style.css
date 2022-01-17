@@ -194,3 +194,11 @@ button i   {
     padding: 0 50px;
 }
 
+.errorBanner {
+    color: red;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+}
