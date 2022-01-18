@@ -184,7 +184,8 @@ button i   {
     padding: 10px 0;
 }
 
-.entities {
+.entities,
+.video {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -201,4 +202,22 @@ button i   {
     width: 100%;
     text-align: center;
     font-size: 35px;
+}
+
+.season {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+.episodeContainer {
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.episodeContainer .contents {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
 }
