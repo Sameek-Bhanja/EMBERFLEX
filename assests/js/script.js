@@ -10,3 +10,7 @@ function previewEnded() {
     $(".previewVideo").toggle();
     $(".previewImage").toggle();
 }
+
+function goBack() {
+    window.history.back();
+}
