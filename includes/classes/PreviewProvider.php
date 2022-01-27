@@ -8,6 +8,16 @@ class PreviewProvider {
         $this->username = $username;
     }
 
+    public function createCategoryPrivewVideo($categoryId) {
+        $entitiesArray = EntityProvider::getEntities($this->con, $categoryId, 1);
+
+        if(sizeof($entitiesArray) == 0) {
+            ErrorMessage::show("No TV Shows to display");
+        }
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
     public function createTVShowsPrivewVideo() {
         $entitiesArray = EntityProvider::getTVShowsEntities($this->con, null, 1);
 
@@ -18,6 +28,16 @@ class PreviewProvider {
         return $this->createPreviewVideo($entitiesArray[0]);
     }   
 
+    public function createMoviesPrivewVideo() {
+        $entitiesArray = EntityProvider::getMoviesEntities($this->con, null, 1);
+
+        if(sizeof($entitiesArray) == 0) {
+            ErrorMessage::show("No Movies to display");
+        }
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    } 
+    
     public function createPreviewVideo($entity) {
         
         if($entity == null) {
