@@ -11,7 +11,7 @@ require_once("includes/classes/Video.php");
 require_once("includes/classes/VideoProvider.php");
 
 if(!isset($_SESSION["userLoggedIn"])) {
-    header("Location: register.php");
+    header("Location: login.php");
 }
 
 $userLoggedIn = $_SESSION["userLoggedIn"];
@@ -29,3 +29,9 @@ $userLoggedIn = $_SESSION["userLoggedIn"];
     </head>
     <body>
         <div class='wrapper'>
+
+<?php 
+if(!isset($hideNav)) {
+    include_once("includes/NavigationBar.php");
+}
+?>  
