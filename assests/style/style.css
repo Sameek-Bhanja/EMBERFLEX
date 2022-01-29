@@ -19,6 +19,19 @@ a h3:hover {
     color: #fff;
 }
 
+.homeButtomHtml input[type="submit"] {
+    background-color: #4285f4;
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 480px;
+    margin-left: 565px;
+    font-size: 16px;
+}
+
 a {
     text-decoration: none;
 }
@@ -330,12 +343,14 @@ button i  {
     transition: background-color 250ms linear;
 }
 
-.logoContainer {
-    height: 40px;
+.homeHtml h1{
+    margin-top: 390px;
 }
 
-.logoContainer img {
-    height: 100%;
+.homeHtml img {
+    height: 100px;
+    margin-top: 700px;;
+    margin-left: 480px;
 }
 
 .navLinks {
@@ -378,3 +393,19 @@ button i  {
     padding: 5px 10px;
     border-radius: 3px;
 }
+
+/*.homelogoContainer {
+    max-height: 300px;
+    align-items: center;
+}
+
+.homelogoContainer img{
+    margin-top: 100px;
+}*/
+
+.HomeLogoImage {
+    padding: 0;
+    margin-top: 100px;
+}
+
+

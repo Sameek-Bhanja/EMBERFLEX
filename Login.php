@@ -15,7 +15,8 @@ $account = new Account($con);
 
         if($sucsess) {
             $_SESSION["userLoggedIn"] = $username;
-            header("Location: index.php");
+            //header("Location: index.php");
+            header("Location: home.php");
         }
    }
 
@@ -50,7 +51,6 @@ function getInputValue($name) {
                     <input type="password" name="password" placeholder="Password" required>
 
                     <input type="submit" name="submitButton" value="SUBMIT">
-
                </form>
                     <a href="register.php" class="signInMessage">Don't have account? Sign Up here!</a> 
            </div>
