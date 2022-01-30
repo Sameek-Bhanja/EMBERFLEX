@@ -19,7 +19,7 @@ a h3:hover {
     color: #fff;
 }
 
-.homeButtomHtml input[type="submit"] {
+.homeButton {
     background-color: #4285f4;
     color: #fff;
     height: 50px;
@@ -27,16 +27,23 @@ a h3:hover {
     border: none;
     border-radius: 3px;
     font-weight: 500;
-    margin-top: 480px;
-    margin-left: 565px;
+    margin-top: 150px;
+    margin-left: 555px;
     font-size: 16px;
 }
+
 
 a {
     text-decoration: none;
 }
 
 .wrapper {
+    min-width: 1050px;
+    min-height: 100%;
+    background-color: #141414;
+}
+
+.homewrapper{
     min-width: 1050px;
     min-height: 100%;
     background-color: #141414;
@@ -394,18 +401,31 @@ button i  {
     border-radius: 3px;
 }
 
-/*.homelogoContainer {
-    max-height: 300px;
-    align-items: center;
+.homelogoContainer {
+    max-height: 100%;
+    max-width: 100%;
 }
 
-.homelogoContainer img{
+.logoContainer img{
+    height: 45px;
+}
+
+.homelogoContainer img {
+    padding: 0;
+    margin-left: 465px;
     margin-top: 100px;
-}*/
+}
+
+.homeH3 {
+    margin-left: 510px;
+}
 
 .HomeLogoImage {
     padding: 0;
-    margin-top: 100px;
+    margin-left: 400px;
+    margin-top: 150px;
+    height: 150px;
+    width: 450px;
 }
 
 
