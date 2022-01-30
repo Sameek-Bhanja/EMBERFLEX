@@ -19,7 +19,7 @@ a h3:hover {
     color: #fff;
 }
 
-.homeButton {
+.homeLogin {
     background-color: #4285f4;
     color: #fff;
     height: 50px;
@@ -28,8 +28,27 @@ a h3:hover {
     border-radius: 3px;
     font-weight: 500;
     margin-top: 150px;
-    margin-left: 555px;
+    margin-left: 450px;
     font-size: 16px;
+}
+
+.homeRegister {
+    background-color: #4285f4;
+    color: #fff;
+    height: 50px;
+    width: 160px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    font-size: 16px;
+    margin-right: 300px;
+}
+
+.homeButton .LogIn {
+    margin-left: 600px;
+    margin-top: 30px;
 }
 
 
@@ -410,6 +429,10 @@ button i  {
     height: 45px;
 }
 
+.galleryLogo {
+    height: 40px;
+}
+
 .homelogoContainer img {
     padding: 0;
     margin-left: 465px;
@@ -427,5 +450,6 @@ button i  {
     height: 150px;
     width: 450px;
 }
+
 
 
