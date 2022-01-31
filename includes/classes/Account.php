@@ -2,10 +2,29 @@
 class Account {
 
     private $con;
-    private $errorArray = array();
+    private $errorArray = array();  
 
     public function __construct($con) {
         $this->con = $con;
+    }
+
+    public function updateDeatails($fn, $ln, $em, $un) {
+        $this->validateFirstName($fn);
+        $this->validatelastName($ln);
+        $this->validateNewEmail($em, $un);
+
+        if(empty($this->errorArray)) {
+            $query = $this->con->prepare("UPDATE users SET firstName=:fn, lastName=:ln, email=:em WHERE username=:un");
+
+            $query->bindValue(":fn", $fn);
+            $query->bindValue(":ln", $ln);
+            $query->bindValue(":em", $em);
+            $query->bindValue(":un", $un);
+
+            return $query->execute();
+        }
+
+        return false;
     }
 
     public function register($fn, $ln, $un, $em, $em2, $pw, $pw2 ) {
@@ -95,6 +114,24 @@ class Account {
 
         $query = $this->con->prepare("SELECT * FROM users WHERE email=:em");
         $query->bindValue(":em", $em);
+
+        $query->execute();
+
+        if($query->rowCount() != 0) {
+            array_push($this->errorArray, Constants::$emailTaken);
+        }
+    }
+
+    private function validateNewEmail($em, $un) {
+
+        if(!filter_var($em, FILTER_VALIDATE_EMAIL)) {
+            array_push($this->errorArray, Constants::$emailInvalid);
+            return;
+        }
+
+        $query = $this->con->prepare("SELECT * FROM users WHERE email=:em AND username != :un");
+        $query->bindValue(":em", $em);
+        $query->bindValue(":un", $un);
 
         $query->execute();
 
