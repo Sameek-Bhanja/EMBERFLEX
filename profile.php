@@ -4,6 +4,9 @@ require_once("includes/classes/Account.php");
 require_once("includes/classes/FormSanitizer.php");
 require_once("includes/classes/Constants.php");
 
+$detailsMessage = "";
+$passwordMessage = "";
+
 if(isset($_POST["saveDeatailsButton"])) {
     $account = new Account($con);
 
@@ -12,12 +15,37 @@ if(isset($_POST["saveDeatailsButton"])) {
     $email = Formsanitizer::sanitizeFormEmail($_POST["email"]);
 
     if($account->updateDeatails($firstName, $lastName, $email, $userLoggedIn)) {
-        // succses
-        echo"succses";
+        $detailsMessage = "<div class='alertSuccses'>
+                                Details Updated Succsesfully !
+                           </div>";
     }
     else {
-        //faliure
-        echo"faliure";
+        $errorMessage = $account->getFirstError();
+
+        $detailsMessage = "<div class='alertError'>
+                                $errorMessage
+                           </div>";
+    }
+}
+
+if(isset($_POST["savePasswordButton"])) {
+    $account = new Account($con);
+
+    $oldPassword = Formsanitizer::sanitizeFormPassword($_POST["oldPassword"]);
+    $newPassword = Formsanitizer::sanitizeFormPassword($_POST["newPassword"]);
+    $newPassword2 = Formsanitizer::sanitizeFormPassword($_POST["newPassword2"]);
+
+    if($account->updatePassword($oldPassword, $newPassword, $newPassword2, $userLoggedIn)) {
+        $passwordMessage = "<div class='alertSuccses'>
+                                Password Updated Succsesfully !
+                           </div>";
+    }
+    else {
+        $errorMessage = $account->getFirstError();
+
+        $passwordMessage = "<div class='alertError'>
+                                $errorMessage
+                           </div>";
     }
 }
 ?>
@@ -42,8 +70,12 @@ if(isset($_POST["saveDeatailsButton"])) {
             <input type="text" name="lastName" placeholder="Last Name" value="<?php echo $lastName; ?>">
             <input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
 
-            <input type="submit" name="saveDeatailsButton" value="Save">
+            <div class="message">
+                <?php echo $detailsMessage; ?>
+            </div>
 
+
+            <input type="submit" name="saveDeatailsButton" value="Save">
         </form>
 
     </div>
@@ -58,7 +90,11 @@ if(isset($_POST["saveDeatailsButton"])) {
             <input type="password" name="newPassword" placeholder="New Password">
             <input type="password" name="newPassword2" placeholder="Confirm New Password">
 
-            <input type="submit" name="SavePasswordButton" value="Save">
+            <div class="message">
+                <?php echo $passwordMessage; ?>
+            </div>
+
+            <input type="submit" name="savePasswordButton" value="Save">
 
         </form>
 

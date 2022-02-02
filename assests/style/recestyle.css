@@ -12,57 +12,19 @@ body {
 }
 
 h3 {
-    color: #e2dfdf;
+    color: #e5e5e5;
 }
 
 a h3:hover {
     color: #fff;
 }
 
-.homeLogin {
-    background-color: #4285f4;
-    color: #fff;
-    height: 50px;
-    width: 150px;
-    border: none;
-    border-radius: 3px;
-    font-weight: 500;
-    margin-top: 150px;
-    margin-left: 450px;
-    font-size: 16px;
-}
-
-.homeRegister {
-    background-color: #4285f4;
-    color: #fff;
-    height: 50px;
-    width: 160px;
-    border: none;
-    border-radius: 3px;
-    font-weight: 500;
-    margin-bottom: 30px;
-    margin-left: 50px;
-    font-size: 16px;
-    margin-right: 300px;
-}
-
-.homeButton .LogIn {
-    margin-left: 600px;
-    margin-top: 30px;
-}
-
-
 a {
     text-decoration: none;
+    color: #0654ba;
 }
 
 .wrapper {
-    min-width: 1050px;
-    min-height: 100%;
-    background-color: #141414;
-}
-
-.homewrapper{
     min-width: 1050px;
     min-height: 100%;
     background-color: #141414;
@@ -81,46 +43,44 @@ a {
     min-height: 300px;
     max-height: 100%;
     width: 450px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+    box-shadow: rgba(0,0,0, 0.1) 0 1px 2px;
     padding: 20px 35px;
     overflow-y: auto;
 }
 
-.column form { 
-display: flex; 
-flex-direction: column;
-padding-top: 30px;
+.column form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
 }
 
+.column form input[type="text"],
 .column form input[type="email"],
-.column form input[type="password"],
-.column form input[type="text"]{
+.column form input[type="password"] {
     font-size: 14px;
     margin: 10px 0;
     border: none;
     border-bottom: 1px solid #dedede;
 }
 
- 
-.column form input[type="submit"]
-{
-  background-color: #4285f4;
-  color: #fff;
-  height: 36px;
-  width: 88px;
-  border: none;
-  border-radius: 3px;
-  font-weight: 500;
-  margin-top: 10px;
-  margin-bottom: 20px;   
-  font-size: 16px;
+.column form input[type="submit"] {
+    background-color: #4285f4;
+    color: #fff;
+    height: 36px;
+    width: 88px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .column .header {
     padding: 20px 0;
 }
 
-.column  h3{
+.column h3 {
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
@@ -133,18 +93,18 @@ padding-top: 30px;
     font-size: 14px;
 }
 
-.column .header img{ 
-    width: 150px;
+.column .header img {
+    width: 100px;
 }
 
-.signInMessage{
+.signInMessage {
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
 }
 
 .errorMessage {
-    color: red;
+    color: #f00;
     font-size: 14px;
     font-weight: 400;
     text-align: center;
@@ -152,12 +112,6 @@ padding-top: 30px;
 
 .previewImage,
 .previewVideo {
-    width: 100%;
-    height: 100%;
-}
-
-.previewVideo video {
-    height: 100%;
     width: 100%;
 }
 
@@ -174,28 +128,28 @@ padding-top: 30px;
 }
 
 .previewContainer.small img {
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .previewOverlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0,0,0,0.3);
     position: absolute;
 }
 
-.previewOverlay .mainDetails h3{
+.previewOverlay .mainDetails h3 {
     color: #fff;
     font-size: 40px;
     margin: 15px 0;
 }
 
-.previewOverlay .mainDetails h4{
+.previewOverlay .mainDetails h4 {
     color: #fff;
     font-size: 20px;
-    margin: 15px 0;
+    margin-top: 0;
 }
 
 .previewOverlay .mainDetails {
@@ -206,11 +160,11 @@ padding-top: 30px;
     flex-direction: column;
 }
 
-.mainDetails button{
-    background-color: rgba(51, 51, 51, 0.4);
+.mainDetails button {
+    background-color: rgba(51,51,51,0.4);
     color: #fff;
-    min-width: 150px;
     border: none;
+    min-width: 150px;
     padding: 0 38px;
     height: 50px;
     max-height: 50px;
@@ -221,7 +175,7 @@ padding-top: 30px;
     cursor: pointer;
 }
 
-button i  {
+button i {
     color: inherit;
 }
 
@@ -248,12 +202,12 @@ button i  {
 }
 
 .errorBanner {
-    color: red;
+    color: #fff;
     position: absolute;
-    top: 40%;
+    top: 25%;
     width: 100%;
     text-align: center;
-    font-size: 35px;
+    font-size: 18px;
 }
 
 .season {
@@ -274,7 +228,6 @@ button i  {
     width: 230px;
     position: relative;
 }
-
 
 .episodeContainer img {
     width: 230px;
@@ -298,13 +251,8 @@ button i  {
     white-space: normal;
 }
 
-.previewCategories.noScroll {
-    white-space: normal;
-}
-
 .watchContainer video {
-  height: 100%;
-  width: 100%;
+    width: 100%;
 }
 
 .videoControls {
@@ -313,7 +261,7 @@ button i  {
     z-index: 1;
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0,0,0,0.3);
 }
 
 .videoControls h1 {
@@ -331,7 +279,6 @@ button i  {
 .upNext {
     height: 100%;
     justify-content: center;
-    margin-right: 300px;
 }
 
 .upNextContainer button {
@@ -341,7 +288,7 @@ button i  {
 .upNextContainer h2,
 .upNextContainer h3 {
     color: #fff;
-} 
+}
 
 .watchNav {
     z-index: 2;
@@ -365,22 +312,20 @@ button i  {
     height: 70px;
     box-sizing: border-box;
     min-width: 1050px;
-    transition: background-color 200ms ease;
+    transition: background-color 200ms linear;
 }
 
 .topBar.scrolled {
     background-color: #141414;
-    transition: background-color 250ms linear;
+    transition: background-color 200ms linear;
 }
 
-.homeHtml h1{
-    margin-top: 390px;
+.logoContainer {
+    height: 40px;
 }
 
-.homeHtml img {
-    height: 100px;
-    margin-top: 700px;;
-    margin-left: 480px;
+.logoContainer img {
+    height: 100%;
 }
 
 .navLinks {
@@ -409,7 +354,7 @@ button i  {
     color: #e5e5e5;
 }
 
-.textBoxContainer {
+.textboxContainer {
     padding: 100px 50px;
 }
 
@@ -424,39 +369,8 @@ button i  {
     border-radius: 3px;
 }
 
-.homelogoContainer {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.logoContainer img{
-    height: 45px;
-}
-
-.galleryLogo {
-    height: 40px;
-}
-
-.homelogoContainer img {
-    padding: 0;
-    margin-left: 465px;
-    margin-top: 100px;
-}
-
-.homeH3 {
-    margin-left: 510px;
-}
-
-.HomeLogoImage {
-    padding: 0;
-    margin-left: 400px;
-    margin-top: 150px;
-    height: 150px;
-    width: 450px;
-}
-
 .settingsContainer {
-    padding: 60px;
+    padding-top: 60px;
     background-color: transparent;
     width: 80%;
     margin-left: auto;
@@ -476,8 +390,8 @@ button i  {
     padding-bottom: 20px;
 }
 
-.settingsContainer form input[type="text"], 
-.settingsContainer form input[type="email"], 
+.settingsContainer form input[type="text"],
+.settingsContainer form input[type="email"],
 .settingsContainer form input[type="password"] {
     width: 300px;
     height: 40px;
@@ -494,7 +408,7 @@ button i  {
     height: 40px;
 }
 
-.alertSuccses,
+.alertSuccess,
 .alertError {
     margin: 10px 0;
 }
@@ -503,7 +417,12 @@ button i  {
     color: #dc1928;
 }
 
-.alertSuccses {
+.alertSuccess {
     color: #2ecc71;
 }
 
+.formSection h3 {
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+}
